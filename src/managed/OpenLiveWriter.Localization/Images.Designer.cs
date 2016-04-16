@@ -2273,26 +2273,6 @@ namespace OpenLiveWriter.Localization {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap InsertMap_LargeImage {
-            get {
-                object obj = ResourceManager.GetObject("InsertMap_LargeImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap InsertMap_SmallImage {
-            get {
-                object obj = ResourceManager.GetObject("InsertMap_SmallImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap InsertMenu {
             get {
                 object obj = ResourceManager.GetObject("InsertMenu", resourceCulture);
@@ -2666,26 +2646,6 @@ namespace OpenLiveWriter.Localization {
         public static System.Drawing.Bitmap ManageTagProviders_SmallImage {
             get {
                 object obj = ResourceManager.GetObject("ManageTagProviders_SmallImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap MapAddPushpin {
-            get {
-                object obj = ResourceManager.GetObject("MapAddPushpin", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap MapEditPushpin {
-            get {
-                object obj = ResourceManager.GetObject("MapEditPushpin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

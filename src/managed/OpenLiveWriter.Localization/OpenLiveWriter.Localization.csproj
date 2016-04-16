@@ -31,9 +31,7 @@
     <Compile Include="StringId.cs" />
     <None Include="CommandBitmaps\Cut.LargeImage.png" />
     <None Include="CommandBitmaps\Paste.LargeImage.png" />
-    <None Include="CommandBitmaps\InsertMap.LargeImage.png" />
     <None Include="CommandBitmaps\InsertLink.SmallImage.png" />
-    <None Include="CommandBitmaps\InsertMap.SmallImage.png" />
     <None Include="CommandBitmaps\FormatTableEditingGroup.LargeImage.png" />
     <None Include="CommandBitmaps\FormatTableEditingGroup.SmallImage.png" />
     <None Include="CommandBitmaps\InsertLink.LargeImage.png" />

@@ -36,7 +36,6 @@ using OpenLiveWriter.PostEditor.ContentSources;
 using OpenLiveWriter.PostEditor.PostHtmlEditing.Sidebar;
 using OpenLiveWriter.PostEditor.Tagging;
 using OpenLiveWriter.SpellChecker;
-using OpenLiveWriter.InternalWriterPlugin;
 using Timer = System.Windows.Forms.Timer;
 using OpenLiveWriter.PostEditor.WordCount;
 using OpenLiveWriter.PostEditor.Video;
@@ -293,14 +292,6 @@ namespace OpenLiveWriter.PostEditor
             commandFormatImageTab = new ContextAvailabilityCommand(CommandId.FormatImageTab);
             CommandManager.Add(commandFormatImageTab);
 
-            // Map contextual tab
-            commandMapContextTabGroup = new ContextAvailabilityCommand(CommandId.MapContextTabGroup);
-            CommandManager.Add(commandMapContextTabGroup);
-            commandFormatMapTab = new ContextAvailabilityCommand(CommandId.FormatMapTab);
-            CommandManager.Add(commandFormatMapTab);
-            CommandManager.Add(new Command(CommandId.FormatMapGroup));
-            CommandManager.Add(new Command(CommandId.FormatMapPropertiesGroup));
-
             // Tag contextual tab
             commandTagContextTabGroup = new ContextAvailabilityCommand(CommandId.TagContextTabGroup);
             CommandManager.Add(commandTagContextTabGroup);
@@ -372,12 +363,6 @@ namespace OpenLiveWriter.PostEditor
             commandInsertVideoFromService.Execute += new EventHandler(commandInsertVideoFromService_Execute);
             CommandManager.Add(commandInsertVideoFromService);
 
-            _mapsFeatureEnabled = MarketizationOptions.IsFeatureEnabled(MarketizationOptions.Feature.Maps);
-            commandInsertMap = new Command(CommandId.InsertMap);
-            commandInsertMap.Enabled = _mapsFeatureEnabled;
-            commandInsertMap.Execute += commandInsertMap_Execute;
-            CommandManager.Add(commandInsertMap);
-
             _tagProvidersFeatureEnabled = MarketizationOptions.IsFeatureEnabled(MarketizationOptions.Feature.TagProviders);
             commandInsertTags = new Command(CommandId.InsertTags);
             commandInsertTags.Enabled = _tagProvidersFeatureEnabled;
@@ -439,20 +424,15 @@ namespace OpenLiveWriter.PostEditor
         private ContextAvailabilityCommand commandImageContextTabGroup;
         private ContextAvailabilityCommand commandTableContextTabGroup;
         private ContextAvailabilityCommand commandVideoContextTabGroup;
-        private ContextAvailabilityCommand commandMapContextTabGroup;
         private ContextAvailabilityCommand commandTagContextTabGroup;
         private ContextAvailabilityCommand commandFormatVideoTab;
         private ContextAvailabilityCommand commandFormatImageTab;
-        private ContextAvailabilityCommand commandFormatMapTab;
         private ContextAvailabilityCommand commandFormatTableTab;
         private ContextAvailabilityCommand commandFormatTagTab;
         public virtual void UpdateContextAvailability()
         {
             commandImageContextTabGroup.ContextAvailability = ContextAvailability.NotAvailable;
             commandFormatImageTab.ContextAvailability = ContextAvailability.NotAvailable;
-
-            commandMapContextTabGroup.ContextAvailability = ContextAvailability.NotAvailable;
-            commandFormatMapTab.ContextAvailability = ContextAvailability.NotAvailable;
 
             commandTagContextTabGroup.ContextAvailability = ContextAvailability.NotAvailable;
             commandFormatTagTab.ContextAvailability = ContextAvailability.NotAvailable;
@@ -479,15 +459,7 @@ namespace OpenLiveWriter.PostEditor
                 string contentBlockId;
                 ContentSourceManager.ParseContainingElementId(contentSourceId, out sourceId, out contentBlockId);
 
-                if (sourceId == MapContentSource.ID)
-                {
-                    if (ApplicationDiagnostics.TestMode)
-                    {
-                        commandMapContextTabGroup.ContextAvailability = initialInsertion ? ContextAvailability.Active : ContextAvailability.Available;
-                        commandFormatMapTab.ContextAvailability = initialInsertion ? ContextAvailability.Active : ContextAvailability.Available;
-                    }
-                }
-                else if (sourceId == TagContentSource.ID)
+                if (sourceId == TagContentSource.ID)
                 {
                     if (ApplicationDiagnostics.TestMode)
                     {
@@ -577,11 +549,6 @@ namespace OpenLiveWriter.PostEditor
         private void commandInsertVideoFromFile_Execute(object sender, EventArgs e)
         {
             InsertSmartContentFromTabbedDialog(VideoContentSource.ID, Convert.ToInt32(VideoContentSource.Tab.File, CultureInfo.InvariantCulture));
-        }
-
-        private void commandInsertMap_Execute(object sender, EventArgs e)
-        {
-            CommandManager.Get(MapContentSource.ID).PerformExecute();
         }
 
         private void commandInsertTags_Execute(object sender, EventArgs e)
@@ -1826,7 +1793,6 @@ namespace OpenLiveWriter.PostEditor
             commandInsertPicture.Enabled = inSourceOrWysiwygModeAndEditFieldNotSelected;
             commandInsertEmoticon.Enabled = inSourceOrWysiwygModeAndEditFieldNotSelected;
             commandInsertTable.Enabled = inSourceOrWysiwygModeAndEditFieldNotSelected;
-            commandInsertMap.Enabled = _mapsFeatureEnabled && inSourceOrWysiwygModeAndEditFieldNotSelected;
             commandInsertTable.Enabled = inSourceOrWysiwygModeAndEditFieldNotSelected;
             commandInsertTags.Enabled = _tagProvidersFeatureEnabled && inSourceOrWysiwygModeAndEditFieldNotSelected;
             commandInsertVideoFromFile.Enabled = _videoProvidersFeatureEnabled && inSourceOrWysiwygModeAndEditFieldNotSelected;
@@ -2378,7 +2344,6 @@ namespace OpenLiveWriter.PostEditor
 #endif
             CommandManager.Get(CommandId.TableMenu).Enabled = allowInsertCommands;
             commandInsertTags.Enabled = allowInsertCommands;
-            commandInsertMap.Enabled = allowInsertCommands;
             commandInsertEmoticon.Enabled = allowInsertCommands;
             commandInsertVideoFromFile.Enabled = allowInsertCommands;
             commandInsertVideoFromService.Enabled = allowInsertCommands;
@@ -3776,8 +3741,6 @@ namespace OpenLiveWriter.PostEditor
 
         private int _editorLoadSuppressCount;
         private string _autoCorrectLexiconFile;
-        private Command commandInsertMap;
-        private bool _mapsFeatureEnabled;
         private bool _videoProvidersFeatureEnabled;
         private bool _tagProvidersFeatureEnabled;
         private Command commandInsertVideoFromFile;

@@ -679,10 +679,6 @@ namespace OpenLiveWriter.Localization
         /// </summary>
         CharNoSpacesCount,
         /// <summary>
-        /// Click to view this map on Live.com
-        /// </summary>
-        ClickToViewMap,
-        /// <summary>
         /// &Close
         /// </summary>
         CloseButton,
@@ -970,10 +966,6 @@ namespace OpenLiveWriter.Localization
         /// Show &Grid
         /// </summary>
         CropShowGridlines,
-        /// <summary>
-        /// Customize Map
-        /// </summary>
-        CustomizeMap,
         /// <summary>
         /// If you do not already have a {0} account create one now. Click the link below to open the web page that will begin your online registration.
         /// </summary>
@@ -2439,10 +2431,6 @@ namespace OpenLiveWriter.Localization
         /// </summary>
         InsertLinkTooltip,
         /// <summary>
-        /// Insert Map
-        /// </summary>
-        InsertMap,
-        /// <summary>
         /// Insert Picture
         /// </summary>
         InsertPicture,
@@ -2658,158 +2646,6 @@ namespace OpenLiveWriter.Localization
         /// Manage Blog
         /// </summary>
         ManageWeblog,
-        /// <summary>
-        /// Map
-        /// </summary>
-        Map,
-        /// <summary>
-        /// Aerial
-        /// </summary>
-        MapAerial,
-        /// <summary>
-        /// Center
-        /// </summary>
-        MapAlignCenter,
-        /// <summary>
-        /// Inline
-        /// </summary>
-        MapAlignInline,
-        /// <summary>
-        /// Left
-        /// </summary>
-        MapAlignLeft,
-        /// <summary>
-        /// Right
-        /// </summary>
-        MapAlignRight,
-        /// <summary>
-        /// Bird's eye
-        /// </summary>
-        MapBirdseye,
-        /// <summary>
-        /// Toggle Bird's eye View
-        /// </summary>
-        MapBirdseyeButton,
-        /// <summary>
-        /// &Bird's eye
-        /// </summary>
-        MapBirdseyeLabel,
-        /// <summary>
-        /// Custom Margins
-        /// </summary>
-        MapCustomMargins,
-        /// <summary>
-        /// East
-        /// </summary>
-        MapDirectionEast,
-        /// <summary>
-        /// North
-        /// </summary>
-        MapDirectionNorth,
-        /// <summary>
-        /// South
-        /// </summary>
-        MapDirectionSouth,
-        /// <summary>
-        /// West
-        /// </summary>
-        MapDirectionWest,
-        /// <summary>
-        /// &Find location:
-        /// </summary>
-        MapFindAddress,
-        /// <summary>
-        /// Map picture
-        /// </summary>
-        MapImageAltText,
-        /// <summary>
-        /// No Margins
-        /// </summary>
-        MapNoMargins,
-        /// <summary>
-        /// Tip: Right-click the map to add a pin
-        /// </summary>
-        MapPushpinTip,
-        /// <summary>
-        /// Road
-        /// </summary>
-        MapRoad,
-        /// <summary>
-        /// Bottom
-        /// </summary>
-        MapSBBottom,
-        /// <summary>
-        /// Caption:
-        /// </summary>
-        MapSBCaption,
-        /// <summary>
-        /// Customize Map...
-        /// </summary>
-        MapSBCustomize,
-        /// <summary>
-        /// Edit the map location, style, and pins
-        /// </summary>
-        MapSBCustomizeTooltip,
-        /// <summary>
-        /// Layout
-        /// </summary>
-        MapSBLayoutHeader,
-        /// <summary>
-        /// Left
-        /// </summary>
-        MapSBLeft,
-        /// <summary>
-        /// Map
-        /// </summary>
-        MapSBMapHeader,
-        /// <summary>
-        /// Margins:
-        /// </summary>
-        MapSBMargins,
-        /// <summary>
-        /// Right
-        /// </summary>
-        MapSBRight,
-        /// <summary>
-        /// Top
-        /// </summary>
-        MapSBTop,
-        /// <summary>
-        /// View Map on Live.com
-        /// </summary>
-        MapSBViewMap,
-        /// <summary>
-        /// Text wrapping:
-        /// </summary>
-        MapSBWrapping,
-        /// <summary>
-        /// Search
-        /// </summary>
-        MapSearch,
-        /// <summary>
-        /// See the Bird's eye view of this location
-        /// </summary>
-        MapSeeInBirdseye,
-        /// <summary>
-        /// Sho&w labels
-        /// </summary>
-        MapShowLabel,
-        /// <summary>
-        /// Map Style
-        /// </summary>
-        MapStyle,
-        /// <summary>
-        /// Zoom In
-        /// </summary>
-        MapZoomIn,
-        /// <summary>
-        /// Zoom Out
-        /// </summary>
-        MapZoomOut,
-        /// <summary>
-        /// Zoom Slider
-        /// </summary>
-        MapZoomSlider,
         /// <summary>
         /// HTML
         /// </summary>
@@ -3139,22 +2975,6 @@ namespace OpenLiveWriter.Localization
         /// Pixels (unit of measure)
         /// </summary>
         Pixels,
-        /// <summary>
-        /// &Map
-        /// </summary>
-        Plugin_Map_InsertableContentSource_MenuText,
-        /// <summary>
-        /// Map
-        /// </summary>
-        Plugin_Map_InsertableContentSource_SidebarText,
-        /// <summary>
-        /// Embed Live Search Maps in your blog posts.
-        /// </summary>
-        Plugin_Map_WriterPlugin_Description,
-        /// <summary>
-        /// Live Search Maps
-        /// </summary>
-        Plugin_Map_WriterPlugin_Name,
         /// <summary>
         /// Tag&s
         /// </summary>
@@ -4898,10 +4718,6 @@ namespace OpenLiveWriter.Localization
         /// &View
         /// </summary>
         ViewButton,
-        /// <summary>
-        /// View map
-        /// </summary>
-        ViewMap,
         /// <summary>
         /// View Blog
         /// </summary>

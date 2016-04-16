@@ -30,7 +30,6 @@ using OpenLiveWriter.PostEditor.LiveClipboard;
 using OpenLiveWriter.PostEditor.PostHtmlEditing;
 using OpenLiveWriter.PostEditor.Tagging;
 using OpenLiveWriter.PostEditor.Video;
-using OpenLiveWriter.InternalWriterPlugin;
 using mshtml;
 
 namespace OpenLiveWriter.PostEditor.ContentSources
@@ -463,8 +462,6 @@ namespace OpenLiveWriter.PostEditor.ContentSources
                 ArrayList builtInContentSources = new ArrayList();
                 if (MarketizationOptions.IsFeatureEnabled(MarketizationOptions.Feature.VideoProviders))
                     AddContentSource(builtInContentSources, typeof(VideoContentSource), showErrors);
-                if (MarketizationOptions.IsFeatureEnabled(MarketizationOptions.Feature.Maps))
-                    AddContentSource(builtInContentSources, typeof(MapContentSource), showErrors);
                 if (MarketizationOptions.IsFeatureEnabled(MarketizationOptions.Feature.TagProviders))
                     AddContentSource(builtInContentSources, typeof(TagContentSource), showErrors);
 

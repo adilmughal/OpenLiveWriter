@@ -54,9 +54,6 @@ namespace OpenLiveWriter.PostEditor
             componentContext.CommandManager.Add(new Command(CommandId.TextDebugGroup));
             componentContext.CommandManager.Add(new Command(CommandId.ValidateDebugGroup));
 
-            componentContext.CommandManager.Add(new Command(CommandId.FormatMapGroup));
-            componentContext.CommandManager.Add(new Command(CommandId.FormatMapPropertiesGroup));
-
             componentContext.CommandManager.EndUpdate();
         }
 

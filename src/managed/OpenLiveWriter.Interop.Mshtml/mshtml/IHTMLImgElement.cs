@@ -10,10 +10,6 @@ namespace mshtml
     [ComImport, Guid("3050F240-98B5-11CF-BB82-00AA00BDCE0B"), TypeLibType((short)0x1040)]
     public interface IHTMLImgElement
     {
-        [DispId(0x7d2)]
-        bool isMap {[param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), TypeLibFunc((short)20), DispId(0x7d2)] set;[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), TypeLibFunc((short)20), DispId(0x7d2)] get; }
-        [DispId(0x7d8)]
-        string useMap {[param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0x7d8), TypeLibFunc((short)20)] set;[return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0x7d8), TypeLibFunc((short)20)] get; }
         [DispId(0x7da)]
         string mimeType {[return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0x7da)] get; }
         [DispId(0x7db)]

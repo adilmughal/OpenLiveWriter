@@ -23,7 +23,6 @@ namespace OpenLiveWriter.CoreServices.Marketization
         //else your feature will not get read in!
         public enum Feature
         {
-            Maps,
             TeamBlog,
             TermsOfUse,
             Privacy,
@@ -132,7 +131,6 @@ namespace OpenLiveWriter.CoreServices.Marketization
             switch (feature)
             {
                 case "Writer Blog": thisFeature = Feature.TeamBlog; break;
-                case "Insert Maps": thisFeature = Feature.Maps; break;
                 case "Terms of Use": thisFeature = Feature.TermsOfUse; break;
                 case "Privacy": thisFeature = Feature.Privacy; break;
                 case "Help": thisFeature = Feature.Help; break;
